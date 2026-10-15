@@ -1,5 +1,5 @@
 // File: shared/Tangan.java
-package shared;
+package shareUTS;
 
 public class Tangan {
     // 1. ENKAPSULASI: Atribut di-set private
