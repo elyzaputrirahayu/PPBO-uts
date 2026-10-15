@@ -1,4 +1,4 @@
-package Main10;
+package main10; 
 
 import tangankiri.PergerakanKiri;
 import tangankanan.PergerakanKanan;
@@ -8,26 +8,23 @@ public class MainKanan {
         PergerakanKiri kiri = new PergerakanKiri();
         PergerakanKanan kanan = new PergerakanKanan();
 
-        System.out.println("=== SKENARIO RUBIK ANGGOTA KANAN ===");
+        // Penanda teks diubah menjadi ANGGOTA KANAN 10
+        System.out.println("=== SKENARIO PENYELESAIAN RUBIK - ANGGOTA KANAN 10 ===");
+
+        // --- ALUR GERAKAN DISAMAKAN PERSIS DENGAN TEMANMU ---
+        kiri.infoTangan();
+        kiri.putarAtas(2);     // Kiri putar atas 2x
 
         kanan.infoTangan();
-        kanan.putarAtas(2);
-        kanan.putarBawah(3);
-        kanan.putarKiri();
-        kanan.putarKanan();
+        kanan.putarBawah(2);   // Kanan putar bawah 2x
 
+        kanan.putarKiri();     // Kanan putar kiri 1x
+
+        kiri.putarKanan();     // Kiri putar kanan 1x
+
+        // --- Menampilkan Statistik Akhir ---
         System.out.println();
-
-        kiri.infoTangan();
-        kiri.putarAtas(2);
-        kiri.putarBawah();
-        kiri.putarKiri();
-        kiri.putarKanan();
-
-        System.out.println();
-        System.out.println("Total gerakan tangan kanan: "
-                + kanan.getTotalGerakan());
-        System.out.println("Total gerakan tangan kiri: "
-                + kiri.getTotalGerakan());
+        System.out.println("Total gerakan tangan kiri: " + kiri.getTotalGerakan());
+        System.out.println("Total gerakan tangan kanan: " + kanan.getTotalGerakan()); 
     }
 }
