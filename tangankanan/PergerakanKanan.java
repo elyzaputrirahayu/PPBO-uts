@@ -1,27 +1,25 @@
 package tangankanan;
 
-import shareUTS.Tangan; // RELASI KELAS: Mengambil kelas Tangan dari package shareuts
+import shareUTS.Tangan; 
 
-public class PergerakanKanan extends Tangan { // PEWARISAN: Mewarisi sifat kelas tangan
+public class PergerakanKanan extends Tangan { 
 
-    // KONSTRUKTOR: Memperbaiki eror implisit super constructor yang tadi
     public PergerakanKanan() {
-        super("Tangan Kanan"); // Mengirimkan argumen ke kelas induk
+        super("Tangan Kanan"); 
     }
 
-    // 1. OVERRIDING: Mengubah perilaku metode infoTangan milik kelas induk
     @Override
     public void infoTangan() {
         System.out.println("[Info] Menggunakan " + getJenisTangan() + " untuk manipulasi sisi kanan rubik.");
     }
 
-    // 2. OVERLOADING Metode putarAtas (Bentuk 1: Tanpa Parameter / Default 1x)
+    // 2. OVERLOADING Metode putarAtas (Bentuk 1: Tanpa Parameter)
     public void putarAtas() {
-        tambahGerakan(1); // Enkapsulasi: Mengakses metode penambah gerakan
+        tambahGerakan(1); 
         System.out.println("[Tangan Kanan] -> Memutar sisi ATAS rubik (1x).");
     }
 
-    // OVERLOADING Metode putarAtas (Bentuk 2: Dengan Parameter Jumlah)
+    // DISISIPKAN: OVERLOADING Metode putarAtas (Bentuk 2: Dengan Parameter Jumlah)
     public void putarAtas(int jumlah) {
         tambahGerakan(jumlah);
         System.out.println("[Tangan Kanan] -> Memutar sisi ATAS rubik sebanyak (" + jumlah + "x).");
@@ -39,7 +37,6 @@ public class PergerakanKanan extends Tangan { // PEWARISAN: Mewarisi sifat kelas
         System.out.println("[Tangan Kanan] -> Memutar sisi BAWAH rubik sebanyak (" + jumlah + "x).");
     }
 
-    // Metode Pergerakan Tambahan
     public void putarKiri() {
         tambahGerakan(1);
         System.out.println("[Tangan Kanan] -> Memutar sisi KIRI rubik (1x).");
