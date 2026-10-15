@@ -9,7 +9,7 @@ public class Tangan {
     // Konstruktor
     public Tangan(String jenisTangan) {
         this.jenisTangan = jenisTangan;
-        this.totalGerakan = 0;
+        this.totalGerakan= 0;
     }
 
     // Getter dan Setter untuk Enkapsulasi
